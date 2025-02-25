@@ -30,7 +30,7 @@
   <li><a href="https://github.com/Mauritas99/Proyecto-Final/blob/main/2_Notebooks/2_Analisis_precio.ipynb">Sistema de analisis de precios.</a></li>
   <ul>
       <li>Ratio price/points</li>
-      <li>Visualización de ratio segun grupos de interés.</li>
+      <li>Visualización del ratio segun grupos de interés.</li>
       <li>Implementación y evaluación de modelo de predicción de precio.</li>
     </ul>
   <li><a href="https://github.com/Mauritas99/Proyecto-Final/blob/main/2_Notebooks/3_NLP.ipynb">NLP.</a></li>
@@ -46,3 +46,26 @@
       <li>Funciones de recomendación de vinos.</li>
     </ul>
 </ol>
+<hr>
+<h3>ETL - EDA.</h3>
+  <h6>Inspección del dataset.</h6>
+  <p>A primera vista, el dataset mostro los siguientes valores, previo a corrección de datos:</p>
+  <img src="#">
+  <h6>Visualizaciones de interés.</h6>
+  <img src="#">
+  <img src="#">
+  <img src="#">
+  <h6>Transformación e imputacion de datos.</h6>
+  <p>Se decidio imputar valores nulos con su valor de media o mediana</p>
+<h3>Sistema de analisis de precios.</h3>
+  <h6>Inspección del dataset.</h6>
+  <h6>Visualizaciones de interés.</h6>
+  <h6>Transformación e imputacion de datos.</h6>
+<h3>NLP.</h3>
+  <h6>Inspección del dataset.</h6>
+  <h6>Visualizaciones de interés.</h6>
+  <h6>Transformación e imputacion de datos.</h6>
+<h3>>Sistemas de recomendación.</h3>
+  <h6>Inspección del dataset.</h6>
+  <h6>Visualizaciones de interés.</h6>
+  <h6>Transformación e imputacion de datos.</h6>
