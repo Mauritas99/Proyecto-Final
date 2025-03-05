@@ -17,7 +17,7 @@
 <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Buttons_github/Seaborn.png" height=40px>
 <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Buttons_github/Scikit_learn.png" height=40px>
 </p>
-<p><b>Para instalar los modelos y dependencias, dirigete a la carpeta del proyecto y ejecuta el siguiente comando bash:</b></p>
+<p><b>Para instalar los módulos y dependencias, dirigete a la carpeta del proyecto y ejecuta el siguiente comando bash:</b></p>
 <li><em>pip install -r requirements.txt</em></li>
 
 
