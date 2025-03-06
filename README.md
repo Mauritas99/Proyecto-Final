@@ -1,6 +1,6 @@
 <h1 align="center">Entrega Final : "Reseña de vinos"</h1>
 <hr>
-<img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Vinoteca.png">
+<img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Vinoteca.png">
 <h2>Descripción general del proyecto.</h2>
 <p>El siguiente trabajo tiene como finalidad aplicar todos los conocimientos y herramientas adquiridas durante el cursado de la diplomatura en Data Science en Comunidad ICARO.</p>
 <p>Teniendo en cuenta esto, se parte de un dataset disponible en Kaggle [ <a href="https://www.kaggle.com/datasets/zynicide/wine-reviews">"wine-reviews"</a> ], el cual esta compuesto por 130k reseñas de sommeliers a vinos de todo el mundo, donde ademas encontramos caracteristicas de los mismos (lugar de procedencia, variedad de uva, bodega, entre otros).</p>
@@ -52,13 +52,13 @@
 <h3>ETL - EDA 🔍</h3>
   <h6>Inspección del dataset.</h6>
   <p>Los primeros valores que arrojo la inspección del dataset mostraron una cantidad considerable de valores nulos, ningun valor duplicado y un valor aproximado de 130k filas y 14 columnas.</p>
-  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20para%20github/Resumen_etl.PNG" height=120px>
+  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Resumen_etl.PNG" height=120px>
   <h6>Visualizaciones de interés.</h6>
   <p>Se empleo histogramas, boxplot y matriz de correlacion para las variables numéricas y gráficos de frecuencia con barras para las variables categóricas (solo aquellas que no tenian una cantidad elevada de categorías posibles por columna).</p>
-  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20para%20github/Visualizacion_1.PNG" height=500px>
-  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20para%20github/Visualizacion_2.PNG" height=500px>
-  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20para%20github/Visualizacion_3.PNG" height=450px>
-  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20para%20github/Resumen_eda.PNG" height=130px>
+  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Visualizacion_1.PNG" height=500px>
+  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Visualizacion_2.PNG" height=500px>
+  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Visualizacion_3.PNG" height=450px>
+  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Resumen_eda.PNG" height=130px>
   <h6>Transformación e imputacion de datos.</h6>
   <p>Al eliminar columnas fuera de interes (específicamente "Unnamed: 0"), se encontraron 9k filas duplicadas (enmascaradas por el indice desfasado de la columna, que las "distinguía" para el metodo .duplicated()). Se retiraron del dataset.</p>
   <p>Si bien los precios de los vinos son unicos, al ser una cantidad menor al 10% valores nulos, se decidió imputar con la media de precios.</p>
@@ -69,17 +69,17 @@
 <h3>Sistema de analisis de precios 💰</h3>
   <h6>Ratio price/points.</h6>
   <p>Teniendo en cuenta la <a href="https://wain.cr/collections/wine-enthusiast-we#:~:text=Las%20calificaciones%20de%20Wine%20Enthusiast,evaluar%20la%20calidad%20del%20vino.&text=Un%20muy%20buen%20vino%20con%20fuertes%20cualidades.&text=Un%20buen%20vino%20que%20merece%20la%20pena%20disfrutar.">escala de Wine Enthusiast</a>, y por cuestiones de facilidad en la interpretación de datos, se generó la variable "price/point_ratio", que señala el "precio" que posee cada punto que obtiene un vino (aquellos vinos con un ratio menor a 0, son considerados "gangas", al ser baratos para la cantidad de puntos que obtiene). Para ello, se estandarizaron los valores de "price" y "points".</p>
-   <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20para%20github/Price_points_ratio.PNG" height=130px>
+   <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Price_points_ratio.PNG" height=130px>
   <h6>Visualización del ratio segun grupos de interés.</h6>
-  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20para%20github/Frecuencias_ratio.PNG" height=500px>
-  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20para%20github/Resumen_ratio.PNG" height= 150px>
+  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Frecuencias_ratio.PNG" height=500px>
+  <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Resumen_ratio.PNG" height= 150px>
   <h6>Implementación y evaluación de modelo de predicción de precio.</h6>
   <p>Se entrenó un modelo de regresión "Random Forest", para predecir el precio en base a determinadas columnas del dataset (se agregaron a X aquellas columnas que mostraban correlación con la variable objetivo).</p>
   <p>Se definió un Pipeline donde se establecia el preprocesamiento de variables categoricas y numéricas y el modelo a emplear.</p>
   <p>La evaluación finalmente arrojo valores positivos para las diferentes métricas:</p>
   <p>
-    <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20para%20github/Pipeline_forest.PNG" height=200px>
-  <img src="https://github.com/Mauritas99/Proyect_images/blob/main/Imagenes%20para%20github/Metricas_png.PNG" height=100px>
+    <img src="https://raw.githubusercontent.com/Mauritas99/Proyect_images/refs/heads/main/Imagenes%20proyecto_final/Pipeline_forest.PNG" height=200px>
+  <img src="https://github.com/Mauritas99/Proyect_images/blob/main/Imagenes%20proyecto_final/Metricas_png.PNG" height=100px>
   </p>
 <hr>
 <h3>NLP 🔠</h3>
@@ -91,7 +91,7 @@
   <h6>Modelo de analisis de sentimientos en reseñas.</h6>
   <p>Finalmente, se elaboró un modelo de regresión logística, que pueda clasificar la polaridad de una reseña, como positiva o negativa. Para ello, se creo la columna de polaridad empleando TextBlob para clasificar cada reseña y entrenar al modelo.</p>
   <p>Las métricas de evaluación arrojaron valores positivos para las predicciónes brindadas:</p>
-  <img src="https://github.com/Mauritas99/Proyect_images/blob/main/Imagenes%20para%20github/Metricas_nlp.PNG" height=100px>
+  <img src="https://github.com/Mauritas99/Proyect_images/blob/main/Imagenes%20proyecto_final/Metricas_nlp.PNG" height=100px>
   <hr>
 <h3>Sistemas de recomendación de vinos 🍷</h3>
   <h6>Preparación el dataset.</h6>
